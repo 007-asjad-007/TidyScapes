@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <link rel="stylesheet" href="css/admin-panel.css">
+</head>
+<body>
+  <h1>Admin Panel - Manage Blogs</h1>
+
+  <!-- Form to add a new blog post -->
+  <div>
+    <h2>Create a New Blog Post</h2>
+    <form id="createBlogForm">
+      <input type="text" id="title" placeholder="Blog Title" required /><br><br>
+      <input type="text" id="author" placeholder="Author Name" required /><br><br>
+      <input type="text" id="categories" placeholder="Categories (comma separated)" /><br><br>
+      <textarea id="content" placeholder="Blog Content" required></textarea><br><br>
+      <input type="text" id="imageURL" placeholder="Image URL" required /><br><br>
+      <input type="date" id="date" required /><br><br>
+      <input type="submit" value="Create Blog Post" />
+    </form>
+  </div>
+
+  <!-- Modal for Editing Blog Post -->
+  <div id="editModal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 1000;">
+    <h3>Edit Blog Post</h3>
+    <form id="editBlogForm">
+      <input type="hidden" id="editBlogId" />
+      <input type="text" id="editTitle" placeholder="Blog Title" required /><br><br>
+      <input type="text" id="editAuthor" placeholder="Author Name" required /><br><br>
+      <input type="text" id="editCategories" placeholder="Categories (comma separated)" /><br><br>
+      <textarea id="editContent" placeholder="Blog Content" required></textarea><br><br>
+      <input type="text" id="editImageURL" placeholder="Image URL" required /><br><br>
+      <input type="date" id="editDate" required /><br><br>
+      <button type="submit">Save Changes</button>
+      <button type="button" id="cancelEdit">Cancel</button>
+    </form>
+  </div>
+
+  <!-- Display all existing blog posts -->
+  <h2>Existing Blog Posts</h2>
+  <div id="blogsContainer"></div>
+
+  <!-- Load the admin panel script -->
+  <script src="admin-panel.js"></script>
+</body>
+</html>
