@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
           // Signed up
           const user = userCredential.user;
           alert("Signed up successfully!");
-          window.location.href ="AbsdhJ$#%@DGSA4sd5f5f4sd65f^&Dsadsad.html"
+          window.location.href ="AdMiN_PaNeL.html"
         })
         .catch((error) => {
           const errorCode = error.code;
