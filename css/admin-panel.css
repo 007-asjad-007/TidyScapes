@@ -1,173 +1,265 @@
 /* General Body Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Container for the Admin Panel */
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Container for the Admin Panel */
+.admin-container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  color: #343a40;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+/* Blog Card Container */
+.blog-card {
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.blog-card:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Blog Title */
+.blog-card h3 {
+  font-size: 1.8em;
+  color: #212529;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* Blog Excerpt */
+.blog-card p {
+  color: #6c757d;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+/* Button Styles */
+button {
+  background-color: #4E9525;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #3c7a1d;
+  transform: translateY(-2px);
+}
+
+/* Adjust Spacing Between Buttons */
+.blog-card button {
+  margin-right: 15px;
+}
+
+.blog-card .edit-btn {
+  background-color: #fbd341;
+}
+
+.blog-card .edit-btn:hover {
+  background-color: #d9b030;
+}
+
+/* Create Blog Post Button Styles */
+form button {
+  background-color: #4E9525;
+  font-size: 1.1em;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #3c7a1d;
+  transform: translateY(-2px);
+}
+
+form .cancel-btn {
+  background-color: #dc3545;
+}
+
+form .cancel-btn:hover {
+  background-color: #bb2d3b;
+}
+
+/* Form Styles for Creating and Editing Blog */
+form {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-top: 25px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1.1em;
+  background-color: #f8f9fa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #4E9525;
+  box-shadow: 0 0 5px rgba(78, 149, 37, 0.5);
+  outline: none;
+}
+
+form textarea {
+  resize: vertical;
+  height: 180px;
+}
+
+/* Modal Styles (for editing a blog) */
+#editModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#editModal .modal-content {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#editModal .modal-content input,
+#editModal .modal-content textarea,
+#editModal .modal-content select {
+  margin-bottom: 15px;
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1.1em;
+}
+
+#editModal button {
+  width: 48%;
+  margin-right: 4%;
+  padding: 10px 0;
+}
+
+#editModal button:last-child {
+  margin-right: 0;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
   .admin-container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+    width: 90%;
   }
-  
-  /* Title */
-  h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  /* Blog Card Container */
+
   .blog-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+    margin: 15px 0;
     padding: 15px;
-    transition: box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
   }
-  
-  .blog-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Blog Title */
+
   .blog-card h3 {
-    font-size: 1.6em;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 1.4em;
   }
-  
-  /* Blog Excerpt */
+
   .blog-card p {
-    color: #666;
-    font-size: 1.1em;
-    margin-bottom: 10px;
-  }
-  
-  /* Button Styles */
-  button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 16px;
     font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
+  }
+
+  .blog-card button {
+    font-size: 0.9em;
+    padding: 8px 12px;
     margin-right: 10px;
-    transition: background-color 0.3s ease;
   }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Form Styles for Creating and Editing Blog */
+
   form {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-top: 20px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 95%;
   }
-  
+
   form input,
   form textarea,
   form select {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1.1em;
+    font-size: 1em;
+    padding: 10px;
   }
-  
-  form textarea {
-    resize: vertical;
-    height: 150px;
+
+  #editModal .modal-content {
+    width: 90%;
   }
-  
-  form button {
-    background-color: #28a745;
+}
+
+@media (max-width: 480px) {
+  .blog-card {
+    padding: 10px;
+  }
+
+  .blog-card h3 {
     font-size: 1.2em;
   }
-  
-  form button:hover {
-    background-color: #218838;
+
+  .blog-card p {
+    font-size: 0.9em;
   }
-  
-  form .cancel-btn {
-    background-color: #dc3545;
+
+  .blog-card button {
+    font-size: 0.8em;
+    padding: 6px 10px;
+    margin-right: 8px;
   }
-  
-  form .cancel-btn:hover {
-    background-color: #c82333;
+
+  form {
+    padding: 15px;
   }
-  
-  /* Modal Styles (for editing a blog) */
-  #editModal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
+
+  form button {
+    font-size: 0.9em;
+    padding: 8px 14px;
   }
-  
+
   #editModal .modal-content {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    width: 500px;
+    width: 95%;
   }
-  
-  #editModal .modal-content input,
-  #editModal .modal-content textarea,
-  #editModal .modal-content select {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  
-  #editModal button {
-    width: 48%;
-    margin-right: 4%;
-  }
-  
-  #editModal button:last-child {
-    margin-right: 0;
-  }
-  
-  /* Responsive Layout */
-  @media (max-width: 768px) {
-    .admin-container {
-      width: 95%;
-    }
-  
-    .blog-card {
-      margin: 15px 0;
-    }
-  
-    form {
-      width: 90%;
-    }
-  
-    #editModal .modal-content {
-      width: 80%;
-    }
-  }
-  
+}

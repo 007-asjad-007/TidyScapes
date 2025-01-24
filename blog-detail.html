@@ -28,6 +28,31 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 </head>
 <body>
+	<style>
+		.blog-image {
+  display: block;
+  margin: 20px auto;
+  width: 50%; /* Default width for desktop */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust image size for mobile screens */
+@media (max-width: 768px) {
+  .blog-image {
+    width: 80%; /* Increase width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-image {
+    width: 90%; /* Make the image almost full-width on very small screens */
+  }
+}
+
+	</style>
     <div class="container pt-5 pb-4">
 		<div class="row justify-content-between align-items-center">
 			<!-- Social Media Icons Section -->
@@ -163,7 +188,102 @@
 		</div>
 	  </div>
 	  
+<!--Footer-->
+	  <footer class="ftco-footer ftco-bg-dark ftco-section">
+		<div class="container">
+		  <div class="row mb-5">
+			<div class="col-md-6 col-lg">
+			  <div class="ftco-footer-widget mb-4">
+				<h2 class="logo"><a href="index.html">Tidy <span>Scapes</span></a></h2>
+				<p>Beyond the hills and lush greenery lies a tranquil space waiting to bloom. Far from the noise of daily life, your outdoor sanctuary can become a haven of peace and beauty. Let us bring your vision to life, one leaf and flower at a time.</p>
+				<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+				  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+				  <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+				  <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+				</ul>
+			  </div>
+			</div>
+			<div class="col-md-6 col-lg">
+			  <div class="ftco-footer-widget mb-4 ml-md-5">
+				<h2 class="ftco-heading-2">Services</h2>
+				<ul class="list-unstyled">
+				  <li><a href="contact.html" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Shrub care</a></li>
+				  <li><a href="contact.html" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Lawn care</a></li>
+				  <li><a href="contact.html" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Tree planting</a></li>
+				  <li><a href="contact.html" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Shrub planting</a></li>
+				  <li><a href="contact.html" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Shrub removal</a></li>
+				  <li><a href="contact.html" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Tree care services</a></li>
+				  <li><a href="services.html" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Other Services</a></li>
+			  </ul>
+			  </div>
+			</div>
+			<div class="col-md-6 col-lg">
+			  <div class="ftco-footer-widget mb-4">
+				  <h2 class="ftco-heading-2">Contact information</h2>
+				  <div class="block-23 mb-3">
+					<ul>
+					  <li><span class="icon icon-map-marker"></span><span class="text">374 Dacula Road, Dacula, GA 30019, USA</span></li>
+					  <li><a href="tel:+14709252782"><span class="icon icon-phone"></span><span class="text">(470) 925-2782</span></a></li>
+					  <li><a href="mailto:tidyscapesllc@gmail.com"><span class="icon icon-envelope"></span><span class="text">tidyscapesllc@gmail.com</span></a></li>
+					</ul>
+				  </div>
+			  </div>
+			</div>
+			<div class="col-md-6 col-lg">
+			   <div class="ftco-footer-widget mb-4">
+				<h2 class="ftco-heading-2">Business Hours</h2>
+				<div class="opening-hours">
+					<h4>Opening Days:</h4>
+					<p class="pl-3">
+				  <p class="footer-line">Monday-Saturday : 7am-8pm</p>
+					<p class="footer-line">Sunday : 8am-6pm</p>
+					</p>
+					<h4>Vacations:</h4>
+					<p class="pl-3">
+					<span>All Official Holidays</span>
+					</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="col-md-12 text-center">
+			  <p>Copyright© 2024 Tidy Scapes. All Rights Reserved.</p>
+  
+			</div>
+		  </div>
+		</div>
+	  </footer>
+	  
+	  <!--Loader-->
+	  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+     
+	  <!--Blogs Fetching Script-->
+	  <script src="blog.js"></script>
 
-  <script src="blog.js"></script>
+	  <!--Other Scripts-->
+	  <script src="js/jquery.min.js"></script>
+	  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+	  <script src="js/popper.min.js"></script>
+	  <script src="js/bootstrap.min.js"></script>
+	  <script src="js/jquery.easing.1.3.js"></script>
+	  <script src="js/jquery.waypoints.min.js"></script>
+	  <script src="js/jquery.stellar.min.js"></script>
+	  <script src="js/owl.carousel.min.js"></script>
+	  <script src="js/jquery.magnific-popup.min.js"></script>
+	  <script src="js/scrollax.min.js"></script>
+	  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	  <script src="js/google-map.js"></script>
+	  <script src="js/main.js"></script>
+
+	  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
 </body>
 </html>

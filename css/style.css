@@ -9810,3 +9810,48 @@ textarea.form-control {
     height: auto;
   }
 }
+
+
+/* Styling the list item container */
+.Login-BTN {
+  list-style: none;
+  margin: 0 10px; /* Space between other nav items */
+  display: inline-block;
+}
+
+/* Styling the anchor tag (button look) */
+.log-link {
+  display: inline-block;
+  padding: 8px 16px; /* Adjust padding for consistent spacing */
+  color: black; /* Text color */
+  text-decoration: none; /* Remove underline */
+  background-color: #fbd341; /* Green background matching the site theme */
+  border-radius: 4px; /* Slightly rounded corners */
+  font-size: 14px; /* Font size matching the other nav items */
+  font-weight: bold; /* Bold text for emphasis */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for the button */
+.log-link:hover {
+  background-color: #2e7d32; /* Slightly darker green on hover */
+  transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Align the button vertically */
+.navbar {
+  display: flex; /* Ensure horizontal alignment */
+  align-items: center; /* Vertically align items */
+}
+
+/* Optional: Remove default margin/padding for the navbar */
+.navbar ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center; /* Vertical alignment */
+}
+
+.navbar li {
+  margin: 0 15px; /* Spacing between nav items */
+}
