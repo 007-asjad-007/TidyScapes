@@ -4,14 +4,13 @@ import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/fir
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDVtopK2EQUOz5bXTulgbhjitCshOJGJ3A",
-  authDomain: "tidyscapes-6ff90.firebaseapp.com",
-  databaseURL: "https://tidyscapes-6ff90-default-rtdb.firebaseio.com",
-  projectId: "tidyscapes-6ff90",
-  storageBucket: "tidyscapes-6ff90.appspot.com",
-  messagingSenderId: "765887611698",
-  appId: "1:765887611698:web:e0863ee181b7a0d995cd2b",
-  measurementId: "G-1RGJ5M1BER",
+  apiKey: "AIzaSyCaSvqojxACumpR20vmnC_7yhuYakuE3pM",
+  authDomain: "tidy-scapes.firebaseapp.com",
+  projectId: "tidy-scapes",
+  storageBucket: "tidy-scapes.firebasestorage.app",
+  messagingSenderId: "965946993878",
+  appId: "1:965946993878:web:9c2f8b6efdf29f49156d77",
+  measurementId: "G-1HN63BH8Z1"
 };
 
 // Initialize Firebase
